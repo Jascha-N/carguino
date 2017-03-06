@@ -1,0 +1,13 @@
+[package]
+authors = ["Jascha Neutelings <neutelings.jascha@gmail.com>"]
+name = "carguino-build"
+version = "0.1.0"
+
+[dependencies]
+bindgen = "0.22"
+error-chain = "0.10"
+lazy_static = "0.2"
+regex = "0.2"
+serde = "0.9"
+serde_derive = "0.9"
+serde_json = "0.9"

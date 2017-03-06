@@ -1,0 +1,25 @@
+[package]
+authors = ["Jascha Neutelings <neutelings.jascha@gmail.com>"]
+name = "carguino"
+version = "0.1.0"
+
+[dependencies]
+cargo = "0.16"
+docopt = "0.7"
+error-chain = "0.10"
+lazy_static = "0.2"
+regex = "0.2"
+rustc-serialize = "0.3"
+serde = "0.9"
+serde_derive = "0.9"
+serde_json = "0.9"
+tempdir = "0.3"
+term = "0.4"
+
+[dependencies.carguino-build]
+path = "../carguino-build"
+
+[dependencies.toml]
+default-features = false
+features = ["serde"]
+version = "0.3"
