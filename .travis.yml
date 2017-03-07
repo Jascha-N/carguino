@@ -3,3 +3,8 @@ rust:
   - stable
   - beta
   - nightly
+cache: cargo
+
+script:
+  - cargo build -v -p carguino-build
+  - cargo build -v -p carguino
