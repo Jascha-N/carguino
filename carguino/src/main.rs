@@ -122,7 +122,9 @@ fn cargo_run(command: &str, args: &[String], config: &mut Config) -> Result<()> 
         builder
     } else {
         config.shell().warn("No target-board was specified; running cargo normally.")?;
-        util::process("cargo").arg(command).args(args).exec()?;
+        let mut cargo = util::process("cargo");
+        config.add_message_format_option(&mut cargo);
+        cargo.arg(command).args(args).exec()?;
         return Ok(());
     };
 
